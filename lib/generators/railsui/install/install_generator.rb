@@ -26,9 +26,9 @@ module Railsui
 
         @theme = Railsui.config.theme
 
-        if File.exist?("#{Rails.root}/config/importmap.rb")
-          say "❌ Detected importmaps which is unfortunately not supported by Rails UI. For best results, please use another bundling solution from jsbundling-rails (i.e., esbuild, bun) before installing", :yellow
-        else
+        # if File.exist?("#{Rails.root}/config/importmap.rb")
+        #   say "❌ Detected importmaps which is unfortunately not supported by Rails UI. For best results, please use another bundling solution from jsbundling-rails (i.e., esbuild, bun) before installing", :yellow
+        # else
           say "🔥 Installing default theme: #{@theme.humanize} 🐶. Don't worry, you can change this."
 
           # Add engine routes
@@ -104,7 +104,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
           say "--"
           say "🔥 Rails UI is now installed. You can access your configuration at /railsui"
           say "Read documentation at https://railsui.com/docs for FAQs, guides, and more."
-        end
+        # end
       end
     end
   end
